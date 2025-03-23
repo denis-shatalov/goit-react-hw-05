@@ -1,0 +1,10 @@
+.btn {
+    display: flex;
+    margin: 20px auto;
+    background-color: blue;
+    border-radius: 6px;
+    padding: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}

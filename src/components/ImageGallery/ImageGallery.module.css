@@ -1,0 +1,10 @@
+.list {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-left: auto;
+    padding-right: auto;
+    
+}
