@@ -4,7 +4,7 @@ import axios from 'axios';
 import css from "../MovieReviews/MovieReviews.module.css";
 
 export default function MovieReviews() {
-  const { filmId } = useParams();
+  const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
   const [error, setError] = useState(null);
 
@@ -12,7 +12,7 @@ export default function MovieReviews() {
     const fetchReviews = async () => {
       try {
         const response = await axios.get(
-          `https://api.themoviedb.org/3/movie/${filmId}/reviews`,
+          `https://api.themoviedb.org/3/movie/${movieId}/reviews`,
           {
             headers: {
               Authorization:
@@ -23,15 +23,15 @@ export default function MovieReviews() {
             },
           }
         );
-        console.log(response.data.results)
         setReviews(response.data.results);
-      } catch (err) {
+      } catch (error) {
+        console.log(error)
         setError('Не вдалося завантажити відгуки...');
       }
     };
 
     fetchReviews();
-  }, [filmId]);
+  }, [movieId]);
 
   if (error) return <p>{error}</p>;
 

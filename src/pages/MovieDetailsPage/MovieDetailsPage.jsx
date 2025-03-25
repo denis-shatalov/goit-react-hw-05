@@ -4,8 +4,8 @@ import { getMovieDetails } from "../../FilmService";
 import MovieInfo from '../../components/MovieInfo/MovieInfo';
 import css from "../MovieDetailsPage/MovieDetailsPage.module.css"
 
-export default function UserDetailsPage() {
-  const { filmId } = useParams();
+export default function MovieDetailsPage() {
+  const { movieId } = useParams();
   const [film, setFilm] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -14,11 +14,11 @@ export default function UserDetailsPage() {
   const backLinkRef = useRef(location.state?.from || '/movies');
 
   useEffect(() => {
-    async function getUser() {
+    async function getMovie() {
       try {
         setIsLoading(true);
         setError(false);
-        const data = await getMovieDetails(filmId);
+        const data = await getMovieDetails(movieId);
         setFilm(data);
       } catch {
         setError(true);
@@ -27,8 +27,8 @@ export default function UserDetailsPage() {
       }
     }
 
-    getUser();
-  }, [filmId]);
+    getMovie();
+  }, [movieId]);
 
   return (
     <div>

@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router';
 import { useDebounce } from 'use-debounce';
 import MovieList from "../../components/MovieList/MovieList"
 import { searchMovies } from '../../FilmService';
-import css from "../MoviePage/MoviePage.module.css"
+import css from "./MoviesPage.module.css"
 
 export default function MoviePage() {
   const [movies, setMovies] = useState([]);

@@ -4,14 +4,14 @@ import axios from 'axios';
 import css from "../MovieCast/MovieCast.module.css"
 
 export default function MovieCast() {
-    const { filmId } = useParams();
+    const { movieId } = useParams();
     const [cast, setCast] = useState([]);
     
      useEffect(() => {
     const fetchCast = async () => {
       try {
         const response = await axios.get(
-          `https://api.themoviedb.org/3/movie/${filmId}/credits`,
+          `https://api.themoviedb.org/3/movie/${movieId}/credits`,
           {
             headers: {
               Authorization:
@@ -29,7 +29,7 @@ export default function MovieCast() {
     };
 
     fetchCast();
-  }, [filmId]);
+  }, [movieId]);
 
     return (
         <div className={css.list}>
