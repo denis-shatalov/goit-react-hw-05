@@ -1,0 +1,13 @@
+.poster {
+    max-width: 250px;
+    margin-left: 20px;
+}
+
+.infobox {
+    display: flex;
+    flex-direction: row;
+}
+
+.info {
+    padding-left: 50px;
+}

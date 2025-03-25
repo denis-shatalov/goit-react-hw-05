@@ -1,0 +1,21 @@
+.list {
+    list-style: none;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.castItem {
+    
+    border: 1px solid black;
+    border-radius: 4px 
+    
+}
+
+.actor {
+    padding: 0 10px
+}

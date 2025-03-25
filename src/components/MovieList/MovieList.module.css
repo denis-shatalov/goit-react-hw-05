@@ -1,0 +1,13 @@
+.list {
+    list-style:square;
+    
+}
+.link {
+text-decoration: none;
+color:black;
+font-size: large;
+}
+
+.link:hover {
+    color: red;
+}
